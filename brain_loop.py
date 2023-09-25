@@ -30,6 +30,12 @@ class Schedule:
         delta_day = round(fibonacci(level))
         return last_date + datetime.timedelta(days=delta_day)
 
+    def get_specific_day_lessons(self, date: datetime.date) -> list[dict]:
+        lessons = []
+        for delta_level in range(0, 10):
+            lessons += [lesson for lesson in self.lessons if self.get_next_training_date(lesson["last_date"], lesson["level"] + 0.1 * delta_level) == date]
+        return lessons
+
     def get_todays_lessons(self) -> list[dict]:
         lessons = [lesson for lesson in self.lessons if self.get_next_training_date(lesson["last_date"], lesson["level"]) <= datetime.date.today()]
         return lessons
@@ -143,8 +149,10 @@ if args.list:
         name = os.path.basename(foldername)
         s = Schedule()
         s.load_lessons(name)
-        lessons_pending = s.get_todays_lessons()
-        if len(lessons_pending) > 0:
-            print(f"* '{name}' ({len(lessons_pending)} lessons pending)")
-        else:
-            print(f"* '{name}' (up to date)")
+        print(f"* {name}")
+        for delta_days in range(0, 7):
+            weekday = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"][(datetime.date.today() + datetime.timedelta(days=delta_days)).weekday()]
+            if delta_days == 0:
+                weekday = "today"
+            lessons_pending = s.get_specific_day_lessons(datetime.date.today() + datetime.timedelta(days=delta_days))
+            print(f"  * {weekday:<10}: {len(lessons_pending):>2} lessons to study")

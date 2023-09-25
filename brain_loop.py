@@ -61,10 +61,23 @@ class Schedule:
 
     def save_lessons(self, name: str) -> None:
         df = pd.DataFrame(self.lessons)
-        df.to_csv(f"./schedules/{name}.csv", index=False, sep=";", encoding="utf-8")
+        if not os.path.exists(f"./schedules/{name}"):
+            os.makedirs(f"./schedules/{name}")
+            filename = "root.csv"
+        else:
+            filename = f"./schedules/{name}/{datetime.datetime.today().strftime('%Y-%m-%d')}.csv"
+        df.to_csv(filename, index=False, sep=";", encoding="utf-8")
 
     def load_lessons(self, name: str) -> None:
-        df = pd.read_csv(f"./schedules/{name}.csv", sep=";", encoding="utf-8")
+        filenames = glob.glob(f"./schedules/{name}/*.csv")
+        filenames.sort()
+        if len(filenames) == 0:
+            raise Exception(f"Schedule '{name}' do not exist.")
+        elif len(filenames) == 1:
+            filename = filenames[0]
+        else:
+            filename = filenames[-2]
+        df = pd.read_csv(filenames[-2], sep=";", encoding="utf-8")
         df['last_date'] = pd.to_datetime(df['last_date']).dt.date
         self.lessons = df.to_dict("records")
 
@@ -104,8 +117,9 @@ if args.study:
 
 if args.list:
     print("List of schedules:")
-    for filename in glob.glob("./schedules/*.csv"):
-        name = os.path.basename(filename).split(".")[0]
+    for foldername in glob.glob("./schedules/*"):
+        name = os.path.basename(foldername)
+        print(name)
         s = Schedule()
         s.load_lessons(name)
         lessons_pending = s.get_todays_lessons()

@@ -63,7 +63,7 @@ class Schedule:
         df = pd.DataFrame(self.lessons)
         if not os.path.exists(f"./schedules/{name}"):
             os.makedirs(f"./schedules/{name}")
-            filename = "root.csv"
+            filename = f"./schedules/{name}/root.csv"
         else:
             filename = f"./schedules/{name}/{datetime.datetime.today().strftime('%Y-%m-%d')}.csv"
         df.to_csv(filename, index=False, sep=";", encoding="utf-8")
@@ -77,7 +77,7 @@ class Schedule:
             filename = filenames[0]
         else:
             filename = filenames[-2]
-        df = pd.read_csv(filenames[-2], sep=";", encoding="utf-8")
+        df = pd.read_csv(filename, sep=";", encoding="utf-8")
         df['last_date'] = pd.to_datetime(df['last_date']).dt.date
         self.lessons = df.to_dict("records")
 
@@ -85,9 +85,31 @@ def add_lesson() -> None:
     add_another = "y"
     while add_another == "y":
         name = input("Please enter the name of the lesson to add (for example: Physics): ")
-        date_start = input("Please enter the date of the first time you'll have this lesson to add (YYYY-MM-DD): ")
-        date_end = input("Please enter the end date of the last time you'll have this lesson to add (YYYY-MM-DD): ")
-        weekdays = input("Please enter the weekday(s) you'll have this lesson to add (for example: monday friday): ")
+        valid = False
+        while not valid:
+            date_start = input("Please enter the date of the first time you'll have this lesson to add (YYYY-MM-DD): ")
+            try:
+                datetime.datetime.strptime(date_start, "%Y-%m-%d")
+                valid = True
+            except ValueError:
+                print("ERROR: Incorrect date format.")
+        valid = False
+        while not valid:
+            date_end = input("Please enter the end date of the last time you'll have this lesson to add (YYYY-MM-DD): ")
+            try:
+                datetime.datetime.strptime(date_end, "%Y-%m-%d")
+                valid = True
+            except ValueError:
+                print("ERROR: Incorrect date format.")
+        valid = False
+        while not valid:
+            weekdays = input("Please enter the weekday(s) you'll have this lesson to add (for example: monday friday): ")
+            for weekday in weekdays.split(" "):
+                if weekday not in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
+                    print(f"ERROR: {weekday} is not a valid weekday. Valid weekdays are: monday, tuesday, wednesday, thursday, friday, saturday, sunday.")
+                    break
+            else:
+                valid = True
         s.add_lessons(
             name=name,
             date_start=datetime.datetime.strptime(date_start, "%Y-%m-%d").date(),
@@ -119,7 +141,6 @@ if args.list:
     print("List of schedules:")
     for foldername in glob.glob("./schedules/*"):
         name = os.path.basename(foldername)
-        print(name)
         s = Schedule()
         s.load_lessons(name)
         lessons_pending = s.get_todays_lessons()

@@ -57,7 +57,7 @@ class Schedule:
             elif output == "n":
                 progression -= 0.1
             old_level = lesson["level"]
-            new_level = min(1.0, max(0.0,  + progression))
+            new_level = min(1.0, max(0.0, lesson["level"] + progression))
             print(f"Your level progressed from {old_level:.0%} to {new_level:.0%}.")
             lesson["level"] = new_level
             lesson["last_date"] = datetime.date.today()

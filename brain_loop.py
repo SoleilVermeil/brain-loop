@@ -51,14 +51,17 @@ class Schedule:
         for i, lesson in enumerate(lessons):
             print(f"Lesson {(i + 1)}/{len(lessons)}.")
             print(f"Now studying {lesson['name']}.")
+            initial_time_interval = self.get_next_training_date(lesson["last_date"], lesson["level"]) - lesson["last_date"]
             number_of_days_late = (datetime.date.today() - self.get_next_training_date(lesson["last_date"], lesson["level"])).days
             if number_of_days_late > 0:
                 print(f"NOTE: You are {number_of_days_late} days late. Therefore a penalty will be applied to your today's progression.")
             output = input(f"Do you understand well today's topic (y/n)? ")
             if output == "y":
-                progression = 0.1 - 0.01 * number_of_days_late
+                # progression = 0.1 - 0.01 * number_of_days_late
+                progression = 0.1 - 0.1 * number_of_days_late / initial_time_interval.days
             elif output == "n":
-                progression = -0.1 - 0.01 * number_of_days_late
+                # progression = -0.1 - 0.01 * number_of_days_late
+                progression = -0.1 - 0.1 * number_of_days_late / initial_time_interval.days
             old_level = lesson["level"]
             new_level = min(1.0, max(0.0, lesson["level"] + progression))
             print(f"Your level progressed from {old_level:.0%} to {new_level:.0%}.")

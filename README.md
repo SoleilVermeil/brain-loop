@@ -18,7 +18,7 @@ Spaced repetition is a proven technique for enhancing memory and long-term reten
    ```
 3. Start studying:
    ```
-   python brain_loop.py --revise [schedule name]
+   python brain_loop.py --study [schedule name]
    ```
 
 For more informations, you can use `python brain_loop.py --help` to see all available commands. Note that all the schedules are stored inside the `./schedules` folder. Each study day a new file is created with the current progression. This will in the future allow to track the progress over time.

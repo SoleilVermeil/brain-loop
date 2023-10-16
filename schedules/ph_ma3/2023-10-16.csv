@@ -2,7 +2,7 @@ name;last_date;level
 Semiconductor physics (20 Sep);2023-10-12;0.4457142857142857
 Semiconductor physics (27 Sep);2023-10-09;0.39
 Semiconductor physics (04 Oct);2023-10-15;0.29
-Semiconductor physics (11 Oct);2023-10-15;0.0
+Semiconductor physics (11 Oct);2023-10-16;0.1
 Semiconductor physics (18 Oct);2023-10-18;0.0
 Semiconductor physics (25 Oct);2023-10-25;0.0
 Semiconductor physics (01 Nov);2023-11-01;0.0
@@ -28,7 +28,7 @@ ADA (13 Dec);2023-12-13;0.0
 Quantum computing (21 Sep);2023-10-12;0.4557142857142857
 Quantum computing (28 Sep);2023-10-12;0.36
 Quantum computing (05 Oct);2023-10-15;0.3
-Quantum computing (12 Oct);2023-10-15;0.0
+Quantum computing (12 Oct);2023-10-16;0.1
 Quantum computing (19 Oct);2023-10-19;0.0
 Quantum computing (26 Oct);2023-10-26;0.0
 Quantum computing (02 Nov);2023-11-02;0.0
@@ -41,7 +41,7 @@ Quantum computing (14 Dec);2023-12-14;0.0
 Particle accelerators (21 Sep);2023-10-12;0.4557142857142857
 Particle accelerators (28 Sep);2023-10-12;0.36
 Particle accelerators (05 Oct);2023-10-15;0.3
-Particle accelerators (12 Oct);2023-10-15;0.0
+Particle accelerators (12 Oct);2023-10-16;0.1
 Particle accelerators (19 Oct);2023-10-19;0.0
 Particle accelerators (26 Oct);2023-10-26;0.0
 Particle accelerators (02 Nov);2023-11-02;0.0
@@ -54,7 +54,7 @@ Particle accelerators (14 Dec);2023-12-14;0.0
 Nanoscience (21 Sep);2023-10-12;0.4557142857142857
 Nanoscience (28 Sep);2023-10-12;0.36
 Nanoscience (05 Oct);2023-10-15;0.3
-Nanoscience (12 Oct);2023-10-15;0.0
+Nanoscience (12 Oct);2023-10-16;0.1
 Nanoscience (19 Oct);2023-10-19;0.0
 Nanoscience (26 Oct);2023-10-26;0.0
 Nanoscience (02 Nov);2023-11-02;0.0
@@ -67,7 +67,7 @@ Nanoscience (14 Dec);2023-12-14;0.0
 Experimental methods (22 Sep);2023-10-15;0.4414285714285714
 Experimental methods (29 Sep);2023-10-15;0.37
 Experimental methods (06 Oct);2023-10-15;0.3
-Experimental methods (13 Oct);2023-10-15;0.0
+Experimental methods (13 Oct);2023-10-16;0.1
 Experimental methods (20 Oct);2023-10-20;0.0
 Experimental methods (27 Oct);2023-10-27;0.0
 Experimental methods (03 Nov);2023-11-03;0.0
@@ -90,7 +90,7 @@ Nuclear interaction (27 Nov);2023-11-27;0.0
 Nuclear interaction (04 Dec);2023-12-04;0.0
 Nuclear interaction (11 Dec);2023-12-11;0.0
 Nuclear interaction (18 Dec);2023-12-18;0.0
-Astrophysics (26 Sep);2023-10-09;0.38
+Astrophysics (26 Sep);2023-10-16;0.48
 Astrophysics (29 Sep);2023-10-12;0.37
 Astrophysics (06 Oct);2023-10-15;0.3
 Astrophysics (17 Oct);2023-10-17;0.0

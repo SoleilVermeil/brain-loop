@@ -25,18 +25,20 @@ class Schedule:
                     "level": 0.0,
                 })
 
+    def fibonacci(self, x: float) -> float:
+        phi = (1 + math.sqrt(5)) / 2
+        y = 10 * x + 2
+        return (phi**y - math.cos(math.pi * y) * phi**(-y)) / math.sqrt(5)
+
     def get_next_training_date(self, last_date: datetime.date, level: float) -> datetime.date:
-        def fibonacci(x: float) -> float:
-            phi = (1 + math.sqrt(5)) / 2
-            y = 10 * x + 2
-            return (phi**y - math.cos(math.pi * y) * phi**(-y)) / math.sqrt(5)
-        delta_day = round(fibonacci(level))
+        delta_day = round(self.fibonacci(level))
         return last_date + datetime.timedelta(days=delta_day)
 
     def get_specific_day_lessons(self, date: datetime.date) -> list[dict]:
         lessons = []
         for delta_level in range(0, 10):
-            lessons += [lesson for lesson in self.lessons if self.get_next_training_date(lesson["last_date"], lesson["level"] + 0.1 * delta_level) == date]
+            delta_days = sum([round(self.fibonacci(0.1 * d_l)) for d_l in range(0, delta_level)])
+            lessons += [lesson for lesson in self.lessons if self.get_next_training_date(lesson["last_date"], lesson["level"] + 0.1 * delta_level) + datetime.timedelta(days=delta_days) == date]
         return lessons
 
     def get_todays_lessons(self) -> list[dict]:

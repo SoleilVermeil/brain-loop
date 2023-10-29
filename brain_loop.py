@@ -59,16 +59,18 @@ class Schedule:
                 print(f"NOTE: You are {number_of_days_late} days late. Therefore a penalty will be applied to your today's progression.")
             output = input(f"Do you understand well today's topic (y/n)? ")
             if output == "y":
-                # progression = 0.1 - 0.01 * number_of_days_late
                 progression = 0.1 - 0.1 * number_of_days_late / initial_time_interval.days
+                lesson["last_date"] = datetime.date.today()
             elif output == "n":
-                # progression = -0.1 - 0.01 * number_of_days_late
                 progression = -0.1 - 0.1 * number_of_days_late / initial_time_interval.days
+                lesson["last_date"] = datetime.date.today()
+            else:
+                print("SKIPPED.")
+                continue
             old_level = lesson["level"]
             new_level = min(1.0, max(0.0, lesson["level"] + progression))
             print(f"Your level progressed from {old_level:.0%} to {new_level:.0%}.")
             lesson["level"] = new_level
-            lesson["last_date"] = datetime.date.today()
             print(f"You will next be tested on {self.get_next_training_date(lesson['last_date'], lesson['level']).strftime('%d %b')}.")
             print("-" * 80)
         print("You have finished studying for today!")

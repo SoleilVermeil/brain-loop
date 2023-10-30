@@ -1,0 +1,280 @@
+C:\Users\xxx\Documents\GitHub\brain-loop>python brain_loop.py --list
+List of schedules:
+* ph_ma3
+  * today     : 40 lessons to study
+  * tuesday   :  3 lessons to study
+  * wednesday :  6 lessons to study
+  * thursday  : 17 lessons to study
+  * friday    :  9 lessons to study
+  * saturday  :  7 lessons to study
+  * sunday    :  8 lessons to study
+
+C:\Users\xxx\Documents\GitHub\brain-loop>python brain_loop.py --study ph_ma3
+Lesson 1/40.
+Now studying Semiconductor physics (27 Sep).
+NOTE: You are 1 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 49% to 58%.
+You will next be tested on 18 Nov.
+--------------------------------------------------------------------------------
+Lesson 2/40.
+Now studying Semiconductor physics (04 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 39% to 46%.
+You will next be tested on 10 Nov.
+--------------------------------------------------------------------------------
+Lesson 3/40.
+Now studying Semiconductor physics (11 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 30% to 32%.
+You will next be tested on 04 Nov.
+--------------------------------------------------------------------------------
+Lesson 4/40.
+Now studying Semiconductor physics (18 Oct).
+NOTE: You are 1 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 30% to 38%.
+You will next be tested on 06 Nov.
+--------------------------------------------------------------------------------
+Lesson 5/40.
+Now studying Semiconductor physics (25 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 0% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 6/40.
+Now studying ADA (27 Sep).
+NOTE: You are 1 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 7/40.
+Now studying ADA (04 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 8/40.
+Now studying ADA (11 Oct).
+NOTE: You are 3 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 9/40.
+Now studying ADA (18 Oct).
+NOTE: You are 1 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 10/40.
+Now studying ADA (25 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 11/40.
+Now studying Quantum computing (28 Sep).
+Do you understand well today's topic (y/n)? y
+Your level progressed from 46% to 56%.
+You will next be tested on 16 Nov.
+--------------------------------------------------------------------------------
+Lesson 12/40.
+Now studying Quantum computing (05 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 40% to 48%.
+You will next be tested on 11 Nov.
+--------------------------------------------------------------------------------
+Lesson 13/40.
+Now studying Quantum computing (12 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 30% to 32%.
+You will next be tested on 04 Nov.
+--------------------------------------------------------------------------------
+Lesson 14/40.
+Now studying Quantum computing (19 Oct).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 0% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 15/40.
+Now studying Quantum computing (26 Oct).
+NOTE: You are 3 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 0% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 16/40.
+Now studying Particle accelerators (28 Sep).
+Do you understand well today's topic (y/n)? y
+Your level progressed from 46% to 56%.
+You will next be tested on 16 Nov.
+--------------------------------------------------------------------------------
+Lesson 17/40.
+Now studying Particle accelerators (05 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 40% to 48%.
+You will next be tested on 11 Nov.
+--------------------------------------------------------------------------------
+Lesson 18/40.
+Now studying Particle accelerators (12 Oct).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 20% to 13%.
+You will next be tested on 01 Nov.
+--------------------------------------------------------------------------------
+Lesson 19/40.
+Now studying Particle accelerators (19 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? n
+Your level progressed from 15% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 20/40.
+Now studying Particle accelerators (26 Oct).
+NOTE: You are 3 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 21/40.
+Now studying Nanoscience (28 Sep).
+Do you understand well today's topic (y/n)? y
+Your level progressed from 46% to 56%.
+You will next be tested on 16 Nov.
+--------------------------------------------------------------------------------
+Lesson 22/40.
+Now studying Nanoscience (05 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 40% to 48%.
+You will next be tested on 11 Nov.
+--------------------------------------------------------------------------------
+Lesson 23/40.
+Now studying Nanoscience (12 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 15% to 5%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 24/40.
+Now studying Nanoscience (19 Oct).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 20% to 13%.
+You will next be tested on 01 Nov.
+--------------------------------------------------------------------------------
+Lesson 25/40.
+Now studying Nanoscience (26 Oct).
+NOTE: You are 3 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 26/40.
+Now studying Experimental methods (22 Sep).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 44% to 49%.
+You will next be tested on 11 Nov.
+--------------------------------------------------------------------------------
+Lesson 27/40.
+Now studying Experimental methods (06 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 40% to 48%.
+You will next be tested on 11 Nov.
+--------------------------------------------------------------------------------
+Lesson 28/40.
+Now studying Experimental methods (13 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 30% to 32%.
+You will next be tested on 04 Nov.
+--------------------------------------------------------------------------------
+Lesson 29/40.
+Now studying Experimental methods (20 Oct).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 0% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 30/40.
+Now studying Experimental methods (27 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 0% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 31/40.
+Now studying Nuclear interaction (25 Sep).
+NOTE: You are 3 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 49% to 56%.
+You will next be tested on 17 Nov.
+--------------------------------------------------------------------------------
+Lesson 32/40.
+Now studying Nuclear interaction (09 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 40% to 48%.
+You will next be tested on 11 Nov.
+--------------------------------------------------------------------------------
+Lesson 33/40.
+Now studying Nuclear interaction (16 Oct).
+NOTE: You are 1 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 30% to 38%.
+You will next be tested on 06 Nov.
+--------------------------------------------------------------------------------
+Lesson 34/40.
+Now studying Nuclear interaction (23 Oct).
+NOTE: You are 4 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 10% to 0%.
+You will next be tested on 31 Oct.
+--------------------------------------------------------------------------------
+Lesson 35/40.
+Now studying Astrophysics (26 Sep).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)? y
+Your level progressed from 48% to 56%.
+You will next be tested on 17 Nov.
+--------------------------------------------------------------------------------
+Lesson 36/40.
+Now studying Astrophysics (29 Sep).
+Do you understand well today's topic (y/n)? y
+Your level progressed from 47% to 57%.
+You will next be tested on 17 Nov.
+--------------------------------------------------------------------------------
+Lesson 37/40.
+Now studying Astrophysics (06 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 38/40.
+Now studying Astrophysics (17 Oct).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 39/40.
+Now studying Astrophysics (20 Oct).
+NOTE: You are 5 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+Lesson 40/40.
+Now studying Astrophysics (27 Oct).
+NOTE: You are 2 days late. Therefore a penalty will be applied to your today's progression.
+Do you understand well today's topic (y/n)?
+SKIPPED.
+You have finished studying for today!
+
+C:\Users\julie\Documents\GitHub\brain-loop>python brain_loop.py --list
+List of schedules:
+* ph_ma3
+  * today     : 11 lessons to study
+  * tuesday   : 10 lessons to study
+  * wednesday :  5 lessons to study
+  * thursday  : 17 lessons to study
+  * friday    :  4 lessons to study
+  * saturday  : 10 lessons to study
+  * sunday    : 12 lessons to study
+
+C:\Users\julie\Documents\GitHub\brain-loop>

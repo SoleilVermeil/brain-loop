@@ -30,14 +30,21 @@ class Schedule:
         y = 10 * x + 2
         return (phi**y - math.cos(math.pi * y) * phi**(-y)) / math.sqrt(5)
 
+    def quadratic(self, x: float) -> float:
+        return 100 * x**2 + 1
+
     def get_next_training_date(self, last_date: datetime.date, level: float) -> datetime.date:
-        delta_day = round(self.fibonacci(level))
+        """
+        For a given progression, returns the number of days to wait before the next training session.
+        Thus, when the progression is at 0%, the result should always be 1 day after the provided 'last_date'.
+        """
+        delta_day = round(self.quadratic(level))
         return last_date + datetime.timedelta(days=delta_day)
 
     def get_specific_day_lessons(self, date: datetime.date) -> list[dict]:
         lessons = []
         for delta_level in range(0, 10):
-            delta_days = sum([round(self.fibonacci(0.1 * d_l)) for d_l in range(0, delta_level)])
+            delta_days = sum([round(self.quadratic(0.1 * d_l)) for d_l in range(0, delta_level)])
             lessons += [lesson for lesson in self.lessons if self.get_next_training_date(lesson["last_date"], lesson["level"] + 0.1 * delta_level) + datetime.timedelta(days=delta_days) == date]
         return lessons
 
@@ -57,7 +64,7 @@ class Schedule:
             number_of_days_late = (datetime.date.today() - self.get_next_training_date(lesson["last_date"], lesson["level"])).days
             if number_of_days_late > 0:
                 pass
-                # print(f"NOTE: You are {number_of_days_late} days late. Therefore a penalty will be applied to your today's progression.")
+                print(f"NOTE: You are {number_of_days_late} days late. Therefore a penalty will be applied to your today's progression.")
             output = input(f"Do you understand well today's topic (y/n)? ")
             if output == "y":
                 progression = 0.1 - 0.1 * number_of_days_late / initial_time_interval.days
@@ -70,6 +77,7 @@ class Schedule:
                 print("-" * 80)
                 continue
             old_level = lesson["level"]
+            print(f"Old level: {old_level:.0%}.")
             new_level = min(1.0, max(0.0, lesson["level"] + progression))
             print(f"Your level progressed from {old_level:.0%} to {new_level:.0%}.")
             lesson["level"] = new_level
